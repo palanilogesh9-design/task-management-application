@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTask Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <div>
+        <h1>GTask Manager</h1>
+        <p>Organize your tasks with add, complete, edit, and delete features.</p>
+      </div>
+    </header>
+
+    <section class="task-creator">
+      <label for="taskInput">New task</label>
+      <div class="input-row">
+        <input id="taskInput" type="text" placeholder="Enter a task..." />
+        <button id="addTaskBtn" class="primary-btn">Add Task</button>
+      </div>
+      <div class="task-controls">
+        <button id="clearCompletedBtn">Clear Completed</button>
+        <button id="clearAllBtn">Clear All</button>
+      </div>
+    </section>
+
+    <section class="task-list-section">
+      <div class="list-header">
+        <h2>Tasks</h2>
+        <span id="taskCount">0 tasks</span>
+      </div>
+      <ul id="taskList" class="task-list"></ul>
+    </section>
+  </main>
+
+  <template id="taskItemTemplate">
+    <li class="task-item">
+      <label class="task-checkbox">
+        <input type="checkbox" />
+        <span class="task-title"></span>
+      </label>
+      <div class="task-actions">
+        <button class="edit-btn" title="Edit task">Edit</button>
+        <button class="delete-btn" title="Delete task">Delete</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
